@@ -1,0 +1,1 @@
+This directory is empty, but should contain possible **macros** or **functions** in `.cmake` files.

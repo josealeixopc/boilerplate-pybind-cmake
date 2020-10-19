@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Allow files and folders with !
+!**/CMakeLists.txt
+!app/
+!cmake/
+!docs/
+!include/
+!python/
+!src/
+!setup.py
+
+# Allow some documentation
+!README.md

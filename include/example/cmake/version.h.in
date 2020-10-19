@@ -1,0 +1,16 @@
+/*
+These files are usually the input for autoconf which will generate final .h files.
+
+Here's an example from PCRE:
+
+#define PCRE_MAJOR          @PCRE_MAJOR@
+#define PCRE_MINOR          @PCRE_MINOR@
+#define PCRE_PRERELEASE     @PCRE_PRERELEASE@
+#define PCRE_DATE           @PCRE_DATE@
+
+Autoconf will replace all variables (@…@) with the respective values and the result will be a .h file.
+*/
+
+// the configured options and settings for 'example' project
+#define example_VERSION_MAJOR @example_VERSION_MAJOR@
+#define example_VERSION_MINOR @example_VERSION_MINOR@
