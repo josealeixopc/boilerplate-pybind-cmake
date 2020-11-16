@@ -44,10 +44,10 @@ cmake --build . --target docs
 
 ## Running in Docker
 
-To add pybind11 as a submodule to a directory, add it as a submodule. You should choose the `stable` branch of pybind11:
+To add pybind11 as a submodule to the current directory, add it as a submodule. You should choose the `stable` branch of pybind11:
 
 ```
-git submodule add https://github.com/pybind/pybind11 -b stable
+git submodule add https://github.com/pybind/pybind11 ./pybind11 -b stable
 git submodule update --init
 ```
 
