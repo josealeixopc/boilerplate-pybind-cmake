@@ -44,6 +44,13 @@ cmake --build . --target docs
 
 ## Running in Docker
 
+To add pybind11 as a submodule to a directory, add it as a submodule. You should choose the `stable` branch of pybind11:
+
+```
+git submodule add https://github.com/pybind/pybind11 -b stable
+git submodule update --init
+```
+
 The `Dockerfile` is already built to automatically install the generated Python modules using `pip`. To verify the bindings working, run:
 
 ```bash
