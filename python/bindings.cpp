@@ -3,7 +3,8 @@
 
 PYBIND11_MODULE(bindings, m)
 {
-    m.doc() = "pybind11 example plugin"; // optional module docstring
+    m.doc() = "pybind11 example bindings"; // optional module docstring
 
-    m.def("add", &add, "A function which adds two numbers");
+    m.def("display", &display, "A function for showing an image.");
+    m.def("add", &add, "A function which adds two numbers.");
 }

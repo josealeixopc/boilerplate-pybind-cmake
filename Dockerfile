@@ -24,24 +24,18 @@ RUN apt-get install -y -qq \
     unzip \
     wget
 
+# Install 3rd party dependencies (in this case, OpenCV)
+RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip && \
+    unzip opencv.zip && \
+    mkdir -p build && cd build && \
+    cmake  ../opencv-master && \
+    cmake --build . && \
+    make install
+
 COPY . /${PROJECT_DIR}/
 RUN mkdir /${PROJECT_DIR}/build
-WORKDIR /${PROJECT_DIR}/build
-RUN cmake .. && \
-    cmake --build .
 
+# pip install runs setup.py which builds the project using the root CMakeLists.txt
 WORKDIR /${PROJECT_DIR}/
 RUN python -m pip install .
 ENTRYPOINT ["/bin/bash"]
-
-# # Delete every file except .so libraries
-# RUN find ./python -type f ! -name '*.so' -delete
-# # Delete some eventual empty directories
-# RUN find . -type d -empty -delete
-
-
-# FROM python:3.7
-
-# WORKDIR /app
-# COPY --from=builder /${PROJECT_DIR}/build/python .
-# ENTRYPOINT ["/bin/bash"]

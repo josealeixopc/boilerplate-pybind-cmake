@@ -17,7 +17,16 @@ int main(int argc, char *argv[])
 
     // calculate square root
     const int outputValue = add(a, b);
-    std::cout << "The sum (" << a << "+" << b << ")" << " is " << outputValue
-              << std::endl;
+    std::cout << "The sum (" << a << "+" << b << ")" << " is " << outputValue << std::endl;
+
+    // calculate square root
+    const int outputValueDisplay = display();
+    if (outputValueDisplay == 0) {
+        std::cout << "We have created a matrix!" << std::endl;
+    }
+    else {
+        std::cout << "We FAILED to create a matrix..." << std::endl;
+    }
+    
     return 0;
 }
