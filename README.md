@@ -74,3 +74,7 @@ help(bindings)
 bindings.add(1, 2)  # should output 3
 bindings.display()  # should output 0, meaning OpenCV functions work (only if OpenCV library is installed or otherwise included in the Wheel)
 ``` 
+
+## Acknowledgements
+
+- Author: [José Aleixo Cruz](https://github.com/josealeixopc)
