@@ -1,6 +1,6 @@
-# Python bindings
+# Boilerplate PyBind CMake
 
-A simple example on how to build a C++ library for calcluations called `calc` using **CMake** and then wrapping it with Python bindings using **PyBind11**.
+A simple boilerplate for starting a C++ project built with **CMake** with **PyBind11** bindings. In this example, a library for calcluations called `calc` is built then wrapped with Python bindings.
 
 ## References
 
